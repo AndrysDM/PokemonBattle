@@ -1,5 +1,14 @@
 import tools as tools
+import os
 from random import randint as rd
+import pandas as pd
+
+ruta=os.getcwd()
+rutdatos=(os.path.join(ruta,'assets'))
+rutdatos=(os.path.join(rutdatos,'poketdeck.csv'))
+
+datos=pd.read_csv(rutdatos)
+print(datos)
 
 mapa=[]
 for i in range(10001):

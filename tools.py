@@ -1,4 +1,5 @@
 from random import randint as rd
+import os
 
 def crear_almanaque():
 	calendario={1:[31,'enero'],2:[28,'febrero'],	3:[31,'marzo'],4:[30,'abril'],5:[31,'mayo'],
@@ -43,3 +44,24 @@ def milog(x):
 		r+=1
 		x=x//2
 	return r			
+	
+def noesunnumero(c):
+	for i in "123456789":
+		if(c==i):
+			return 0
+	return 1
+
+def inicializar_fotos(ruta):
+	dir={}
+	for arch in os.listdir(ruta):
+		p=''
+		for c in arch :
+			if(noesunnumero(c)):
+				break
+			p+=c
+		d=os.path.join(ruta,arch)
+		dir[int(p)]=d
+	return dir
+	
+
+	
