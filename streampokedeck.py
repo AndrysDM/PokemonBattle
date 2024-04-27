@@ -21,8 +21,9 @@ def streampokedeck(pokegrande):
     rutdatos=(os.path.join(rutdatos,'arreglado.csv'))
     datos=pd.read_csv(rutdatos)
     
-    a=st.number_input('Ingrese el menor:',value=1,step=1, min_value= 1, max_value= 151)
-    b=st.number_input('Ingrese el mayor:',value=1,step=1, min_value= 1, max_value= 151)
+    
+    a=st.number_input('Ingrese el menor:',value=1,step=1,min_value=1,max_value=151)
+    b=st.number_input('Ingrese el mayor:',value=1,step=1,min_value=1,max_value=151)
 
     a-=1
     left,right=st.columns(2)

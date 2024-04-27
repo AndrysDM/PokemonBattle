@@ -1,5 +1,7 @@
 from random import randint as rd
 import os
+import time
+import streamlit as st
 
 def crear_almanaque():
 	calendario={1:[31,'enero'],2:[28,'febrero'],	3:[31,'marzo'],4:[30,'abril'],5:[31,'mayo'],
@@ -109,3 +111,14 @@ def asignar_colores_a_tipos():
         "Hada": "#EE99AC"
     }
     return colores_por_tipo
+
+def pikachu():
+	img_tmp=st.sidebar.empty()
+	i=0
+	while True:
+		ruta=os.path.join(os.getcwd(),'assets')
+		ruta=os.path.join(ruta,'pikachu')
+		ruta=os.path.join(ruta,f'pika-{i}.png')
+		img_tmp.image(ruta,width=250)
+		time.sleep(10)
+		i=rd(0,5)

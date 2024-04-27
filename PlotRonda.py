@@ -24,9 +24,9 @@ def hex_to_rgb(hex_string):
 
 def matriz_color(tipostr):
     tipos=tipostr.split('/')
-    print(tipos)
+    #print(tipos)
     colores = [mapa_de_tipo_color[i] if i!='none' else '#000000' for i in tipos]
-    print(colores)
+    #print(colores)
     color_start = hex_to_rgb(colores[0])
     color_end = hex_to_rgb(colores[-1])
 
