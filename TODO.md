@@ -7,6 +7,6 @@
 []hacer la pokedeck de la izquierda
 
 []crear la pagina para los enfrentamientos
-    []crear la funcion que le pase base y retorne una imaguen de el grafo
+    [x]crear la funcion que le pase base y retorne una imaguen de el grafo
     []hacer esto para cada seccion del torneo
 

@@ -46,7 +46,7 @@ def milog(x):
 	return r			
 	
 def noesunnumero(c):
-	for i in "123456789":
+	for i in "0s123456789":
 		if(c==i):
 			return 0
 	return 1
@@ -64,4 +64,18 @@ def inicializar_fotos(ruta):
 	return dir
 	
 
-	
+def Tplayers(players,pokemon):
+	k=[]
+	for i in players:
+		p=[pokemon[i[0]],i[1],i[2]]
+		k.append(p)
+	return k
+
+def Tinscrip(inscript,poke):
+	k=[]
+	for i in inscript:
+		r=[]
+		for j in i[1]:
+			r.append([poke[j[0]],j[1],j[2]])
+		k.append(r)
+	return k

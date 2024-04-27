@@ -1,4 +1,5 @@
 import random as rd
+from copy import deepcopy
 from tools import milog as ln
 
 def descalificar(players):
@@ -34,14 +35,14 @@ def torneo(players):
     posiciones_iniciales_y = posiciones_iniciales_y + posiciones_iniciales_y
 
     for j in range(0, len(players)):
-        base[len(base) - 1][j] = {'y': posiciones_iniciales_y[j],'win':0,'x': ((li-1)*2 if j < size//2 else -(li-1)*2), 'player': players[j]}
+        base[len(base) - 1][j] = {'y': posiciones_iniciales_y[j],'win':0,'x': ((li-1)*2 if j < size//2 else -(li-1)*2), 'player': {'name':players[j][1], 'foto': players[j][0], 'tipo': players[j][2]}}
     
     i = len(base) - 1
     while i > 0:
         print('\n\n\nResultados de la ronda numero', li - i)
         j = 0
         while j < len(base[i]):
-            base[i-1][j//2]['player'] = enfrentar(base[i][j]['player'],base[i][j+1]['player'])
+            base[i-1][j//2]['player'] = deepcopy(enfrentar(base[i][j]['player'],base[i][j+1]['player']))
             base[i-1][j//2]['y']=(base[i][j]['y']+base[i][j+1]['y'])//2
             base[i-1][j//2]['x']=base[i][j]['x'] - (2 if base[i][j]['x'] > 0 else -2)  
 
