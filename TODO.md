@@ -11,3 +11,4 @@
     [x]hacer esto para cada seccion del torneo
 
 [x]arreglar el reguero que tengo en el git
+[x]probar pushear de el repo clonado
