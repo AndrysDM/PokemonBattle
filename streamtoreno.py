@@ -32,11 +32,11 @@ def streamtorneo(inscritos, base):
         else:
             return 'Reiniciar Torneo'
     # Mostrar el botón con el contador como nombre y la función de devolución de llamada
-    centered_container = st.container()
-    if(contador <= len(base)+2):
-        with centered_container:
-            if st.button(text_contador(), on_click=actualizar_contador, ):
-                pass  # No se necesita ninguna acción aquí
-
+    col=st.columns(3)
+    
+    with col[1]:
+        if st.button(text_contador(), on_click=actualizar_contador, ):
+            pass  # No se necesita ninguna acción aquí
+        
     # Llamar a la función torneoinscripciones con las inscripciones
     

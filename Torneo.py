@@ -47,5 +47,4 @@ def torneo(players):
             
             j += 2
         i -= 1
-    print(base)
     return base

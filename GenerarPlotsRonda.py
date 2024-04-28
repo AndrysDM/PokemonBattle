@@ -2,9 +2,11 @@ import os
 from PlotRonda import plot_ronda
 from copy import deepcopy
 ruta=os.getcwd()
+carpeta_destino=(os.path.join(ruta,'rondas_del_torneo'))
 fotobola=(os.path.join(ruta,'assets'))
 fotobola=(os.path.join(fotobola,'poke-ball.png'))
-
+if not os.path.exists(carpeta_destino):
+    os.makedirs(carpeta_destino)
 def GenerarPlotsRonda(base):
     rondas = len(base)
     for i in range(rondas+1):
