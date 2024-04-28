@@ -15,9 +15,8 @@ for i in range(200):
 
 calendario=tools.crear_almanaque()
 empieza=rd(1,100)
-termina=rd(150,250)
-empieza=1
-termina=100
+termina=empieza+ 10 + rd(0,30)
+
 
 print('Las inscripciones estaran disponibles en el intervalo')
 tools.que_dia_es_hoy(empieza,calendario)
