@@ -20,16 +20,16 @@ def enfrentar(player1, player2):
 def torneo(players):
     size = len(players)
     li = ln(size)
-    base = []
-    p = 1
-    for i in range(11):
-        tmp = []
-        if p > size:
-            break
-        for j in range(p):
-            tmp.append({'y':0,'x':0,'yhijo':0,'win':0,'player':''})
-        base.append(tmp)
-        p *= 2
+    base = [[{'y':0,'x':0,'yhijo':0,'win':0,'player':''} for j in range(2**i)]for i in range (li)]
+    # p = 1
+    # for i in range(11):
+    #     tmp = []
+    #     if p > size:
+    #         break
+    #     for j in range(p):
+    #         tmp.append({'y':0,'x':0,'yhijo':0,'win':0,'player':''})
+    #     base.append(tmp)
+    #     p *= 2
     
     posiciones_iniciales_y = [2*(size//4-i)-1 for i in range(size//2)]
     posiciones_iniciales_y = posiciones_iniciales_y + posiciones_iniciales_y
@@ -56,4 +56,5 @@ def torneo(players):
             
             j += 2
         i -= 1
+    print(base)
     return base
