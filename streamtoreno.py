@@ -2,11 +2,11 @@ from torneoinscripcion import torneoinscripciones
 import streamlit as st
 from torneotorneo import torneotorneo
 from torneowin import torneowin
-def streamtorneo(inscritos, base):
+def streamtorneo(inscritos, base,descalificados):
     # Obtener el valor actual del contador
     contador = st.session_state.get("contador", 0)
     if contador == 0: 
-        torneoinscripciones(inscritos)
+        torneoinscripciones(inscritos,descalificados)
     elif contador <= len(base)+1:
         torneotorneo(contador-1)
     else:

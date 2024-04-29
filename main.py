@@ -32,6 +32,9 @@ def generar_datos():
 
 	base=tor.torneo(players2)
 	GenerarPlotsRonda(base)
+	print(inscritos2)
+	print(descalificados)
+	descalificados = (descalificados,len(players2))
 	return inscritos2,base,descalificados
 
 def main():

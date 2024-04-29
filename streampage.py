@@ -10,7 +10,7 @@ def visual(inscritos,base,pokegrande,descalificados):
         streaminicio()
 
     def Torneo():
-        streamtorneo(inscritos,base)
+        streamtorneo(inscritos,base,descalificados)
 
     def Pokedex():
         streampokedeck(pokegrande)
