@@ -5,7 +5,7 @@ from streampokedeck import streampokedeck
 from streamdesarrolladores import streamdesarolladores
 from streaminicio import streaminicio
 import os
-def visual(players,inscritos,base,pokegrande):
+def visual(inscritos,base,pokegrande,descalificados):
     def Inicio():
         streaminicio()
 

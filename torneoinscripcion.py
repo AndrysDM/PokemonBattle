@@ -13,3 +13,4 @@ def torneoinscripciones(inscritos):
         for i in range(0,len(dia[1])):
             with col[i]:
                 st.image(fotos[i],caption=dia[1][i][1])
+

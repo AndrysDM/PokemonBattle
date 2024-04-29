@@ -2,7 +2,7 @@ import random as rd
 from copy import deepcopy
 from tools import milog as ln
 
-def descalificar(players):
+def descalificar(players,descalificados):
     size = len(players)
     p = 8 * 8 * 8 * 8 * 8
     while p > size:
@@ -11,7 +11,7 @@ def descalificar(players):
     for i in range(p, size):
         u = len(players) - 1
         print(players[u])
-        players.pop()
+        descalificados.append(players.pop())
     print('\n\n\n')
 
 def enfrentar(player1, player2):
