@@ -34,7 +34,7 @@ def torneo_pos_inscripcion(players,descalificados):
             if i%resolucion==0:
                 col = st.columns(resolucion)
             with col[i%resolucion]:
-                st.image(descalificados[i][0],caption=descalificados[i][1])
+                st.image(descalificados[i][0].replace('assets\\Pokemon Grande','fotos_con_fondo'),caption=descalificados[i][1])
     
     #lo mismo para los calificados
     st.write(' ')
@@ -66,7 +66,7 @@ def torneo_pos_inscripcion(players,descalificados):
         if i%resolucion==0:
             col = st.columns(resolucion)
         with col[i%resolucion]:
-            st.image(players[i][0],caption=players[i][1])
+            st.image(players[i][0].replace('assets\\Pokemon Grande','fotos_con_fondo'),caption=players[i][1])
         
 
 
