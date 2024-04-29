@@ -34,12 +34,11 @@ def generar_datos():
 	GenerarPlotsRonda(base)
 	print(inscritos2)
 	print(descalificados)
-	descalificados = (descalificados,len(players2))
-	return inscritos2,base,descalificados
+	return inscritos2,base,players2,descalificados
 
 def main():
-	inscritos2,base, descalificados =generar_datos()
-	mi_st.visual(inscritos2,base,pkgrandes, descalificados)
+	inscritos2,base,players2 ,descalificados =generar_datos()
+	mi_st.visual(inscritos2,base,pkgrandes, players2 ,descalificados)
 	#los resultados del torneo quedan guardados en 'base'
 	
 

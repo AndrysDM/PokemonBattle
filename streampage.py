@@ -5,12 +5,12 @@ from streampokedeck import streampokedeck
 from streamdesarrolladores import streamdesarolladores
 from streaminicio import streaminicio
 import os
-def visual(inscritos,base,pokegrande,descalificados):
+def visual(inscritos,base,pokegrande,players,descalificados):
     def Inicio():
         streaminicio()
 
     def Torneo():
-        streamtorneo(inscritos,base,descalificados)
+        streamtorneo(inscritos,base,players,descalificados)
 
     def Pokedex():
         streampokedeck(pokegrande)

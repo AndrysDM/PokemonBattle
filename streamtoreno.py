@@ -2,20 +2,23 @@ from torneoinscripcion import torneoinscripciones
 import streamlit as st
 from torneotorneo import torneotorneo
 from torneowin import torneowin
-def streamtorneo(inscritos, base,descalificados):
+from torneoposinscripcion import torneo_pos_inscripcion
+def streamtorneo(inscritos, base,players,descalificados):
     # Obtener el valor actual del contador
     contador = st.session_state.get("contador", 0)
     if contador == 0: 
-        torneoinscripciones(inscritos,descalificados)
-    elif contador <= len(base)+1:
-        torneotorneo(contador-1)
+        torneoinscripciones(inscritos)
+    elif contador == 1:
+        torneo_pos_inscripcion(players,descalificados)
+    elif contador <= len(base)+2:
+        torneotorneo(contador-2)
     else:
         torneowin(base[0][0]['player']['name'],base[0][0]['player']['foto'])
 
     # Función de devolución de llamada para actualizar el contador
     def actualizar_contador():
         nonlocal contador
-        if(contador <= len(base)+1):
+        if(contador <= len(base)+2):
             contador += 1
         else:
             st.cache_data.clear()
@@ -24,10 +27,12 @@ def streamtorneo(inscritos, base,descalificados):
         st.session_state.contador = contador
     def text_contador():
         if(contador == 0):
+            return 'Continuar!'
+        elif(contador == 1):
             return '🔥Empezar torneo!🔥'
-        elif contador <= len(base):
+        elif contador <= len(base)+1:
             return '🔥Siguiente Ronda!🔥'
-        elif contador == len(base)+1:
+        elif contador == len(base)+2:
             return '🔥Mostrar Ganador🔥'
         else:
             return 'Reiniciar Torneo'
