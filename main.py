@@ -5,7 +5,7 @@ ruta=os.getcwd()
 ruta=os.path.join(ruta,'assets')
 pkgrandes=tools.inicializar_fotos(os.path.join(ruta,'Pokemon Grande'))
 
-
+from ponerfondo import generar_fotos_fondo
 import Torneo as tor
 #jugadores que pasaran a players2 con <foto,nombre,tipo>:
 from inscripcion import inscripciones
@@ -33,7 +33,8 @@ def generar_datos():
 	base=tor.torneo(players2)
 	GenerarPlotsRonda(base)
 	#print(inscritos2)
-	#print(descalificados)
+	generar_fotos_fondo(players2)
+	generar_fotos_fondo(descalificados)
 	print("el ganador es: ")
 	print(base[0][0])
 	return inscritos2,base,players2,descalificados

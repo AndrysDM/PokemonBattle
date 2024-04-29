@@ -1,6 +1,7 @@
 import streamlit as st
 
 def torneowin(nombre_ganador, url_foto_ganador):
+    url_foto_ganador=url_foto_ganador.replace('assets\\Pokemon Grande','fotos_con_fondo')
     st.markdown("<h1 style='text-align: center; color: #FFD700;'>¡Felicidades, campeón!</h1>", unsafe_allow_html=True)
     st.write(f"<h2 style='text-align: center;'>¡{nombre_ganador} ha ganado!</h2>", unsafe_allow_html=True)
 
