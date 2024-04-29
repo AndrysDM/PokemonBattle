@@ -6,6 +6,8 @@ from streamdesarrolladores import streamdesarolladores
 from streaminicio import streaminicio
 import os
 def visual(inscritos,base,pokegrande,players,descalificados):
+    # Configurar el tema de la página en light
+
     def Inicio():
         streaminicio()
 

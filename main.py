@@ -32,11 +32,18 @@ def generar_datos():
 
 	base=tor.torneo(players2)
 	GenerarPlotsRonda(base)
-	print(inscritos2)
-	print(descalificados)
+	#print(inscritos2)
+	#print(descalificados)
+	print("el ganador es: ")
+	print(base[0][0])
 	return inscritos2,base,players2,descalificados
 
 def main():
+	st.set_page_config(
+		page_title="Pokemon Battle",
+		page_icon="./assets/icono.png",
+		initial_sidebar_state="collapsed"
+	)
 	inscritos2,base,players2 ,descalificados =generar_datos()
 	mi_st.visual(inscritos2,base,pkgrandes, players2 ,descalificados)
 	#los resultados del torneo quedan guardados en 'base'

@@ -4,23 +4,12 @@ from matplotlib.patches import Rectangle
 from PIL import Image
 from tools import asignar_colores_a_tipos
 import numpy as np
-
+from tools import hex_to_rgb
 mapa_de_tipo_color = asignar_colores_a_tipos()
 
 ruta=os.getcwd()
 fotourl=(os.path.join(ruta,'assets'))
 save_folder=(os.path.join(ruta,'rondas_del_torneo'))
-
-def hex_to_rgb(hex_string):
-    # Eliminar el símbolo '#' del string
-    hex_string = hex_string.lstrip('#')
-    
-    # Extraer los componentes de rojo, verde y azul del string
-    red = int(hex_string[0:2], 16)
-    green = int(hex_string[2:4], 16)
-    blue = int(hex_string[4:6], 16)
-
-    return np.array([red, green, blue])/256
 
 def matriz_color(tipostr):
     tipos=tipostr.split('/')

@@ -2,6 +2,7 @@ from random import randint as rd
 import os
 import time
 import streamlit as st
+import numpy as np
 
 def crear_almanaque():
 	calendario={1:[31,'enero'],2:[28,'febrero'],	3:[31,'marzo'],4:[30,'abril'],5:[31,'mayo'],
@@ -122,3 +123,14 @@ def pikachu():
 		img_tmp.image(ruta,width=250)
 		time.sleep(10)
 		i=rd(0,5)
+
+def hex_to_rgb(hex_string):
+    # Eliminar el símbolo '#' del string
+    hex_string = hex_string.lstrip('#')
+    
+    # Extraer los componentes de rojo, verde y azul del string
+    red = int(hex_string[0:2], 16)
+    green = int(hex_string[2:4], 16)
+    blue = int(hex_string[4:6], 16)
+
+    return np.array([red, green, blue])/256
