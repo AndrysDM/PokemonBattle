@@ -7,7 +7,7 @@ def streamdesarolladores():
     # Título de la página
     st.markdown("<h1 style='text-align: center; color: #FF4533;'>Creado por:</h1>", unsafe_allow_html=True)    
     # Nombres de los desarrolladores
-    st.markdown("<h3 style='text-align: center;'>- Domingues Moreno A. -</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>- Domínguez Moreno A. -</h2>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center;'>- Ferrer Leyva O. -</h2>", unsafe_allow_html=True)
 
 
